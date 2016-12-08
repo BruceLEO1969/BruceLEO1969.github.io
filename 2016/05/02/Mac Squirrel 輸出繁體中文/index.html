@@ -1,0 +1,744 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="en">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="輸入法,Squirrel,RIME," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="Mac 上配置 Rime 用五筆輸出繁體字的配置。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Tranditional Chinese in Squirrel">
+<meta property="og:url" content="http://blog.balaleica.xyz/2016/05/02/Mac Squirrel 輸出繁體中文/index.html">
+<meta property="og:site_name" content="嗨呀 這網站有毒">
+<meta property="og:description" content="Mac 上配置 Rime 用五筆輸出繁體字的配置。">
+<meta property="og:image" content="https://rimeime.github.io/images/logo.png">
+<meta property="og:updated_time" content="2016-12-08T12:56:44.322Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Tranditional Chinese in Squirrel">
+<meta name="twitter:description" content="Mac 上配置 Rime 用五筆輸出繁體字的配置。">
+<meta name="twitter:image" content="https://rimeime.github.io/images/logo.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 'undefined',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://blog.balaleica.xyz/2016/05/02/Mac Squirrel 輸出繁體中文/"/>
+
+
+
+
+
+  <title> Tranditional Chinese in Squirrel | 嗨呀 這網站有毒 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">嗨呀 這網站有毒</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">THE MIND PLAYS SHAMEFUL TRICKS WHEN YOU WHEN YOU WANT SOMETHING TOO MUCH</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            About
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="st-search-show-outputs">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            Search
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <form class="site-search-form">
+  <input type="text" id="st-search-input" class="st-search-input st-default-search-input" />
+</form>
+
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+    (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+    e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install', 'XPrkb7dP-x3y6U_vxvQs','2.0.0');
+</script>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://blog.balaleica.xyz/2016/05/02/Mac Squirrel 輸出繁體中文/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="靈魂歌者喵喵喵">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/images/avatar.jpg">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="嗨呀 這網站有毒">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="嗨呀 這網站有毒" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Tranditional Chinese in Squirrel
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-05-02T01:03:39+08:00">
+                2016-05-02
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/IME/" itemprop="url" rel="index">
+                    <span itemprop="name">IME</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/IME/Mac/" itemprop="url" rel="index">
+                    <span itemprop="name">Mac</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>times
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><img src="https://rimeime.github.io/images/logo.png" class="img-topic"></p>
+<p>Mac 上配置 Rime 用五筆輸出繁體字的配置。</p>
+<a id="more"></a>
+<h2 id="爲什麼是繁體"><a href="#爲什麼是繁體" class="headerlink" title="爲什麼是繁體"></a>爲什麼是繁體</h2><p>在文章的開頭 ，先感謝<strong>佛振</strong>大神創造了輸入法之神 Rime 讓我們這些輸入法愛好者從此有了神的庇祐 。</p>
+<p>至於從小寫着簡體的我爲什麼最終選擇了繁體 ，李如一先生在知乎上的很多回答基本上囊括了所有的初衷與動機 ：</p>
+<blockquote>
+<ol>
+<li>我是看簡體字長大的，而「我就是不喜歡舒舒服服的」。</li>
+<li>It’s just a small step in the process of undoing everything the Chinese Communist Party did to us in the past several decades.</li>
+</ol>
+</blockquote>
+<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><p>Squirrel 目前的最新版本是 0.9.26.1 ，在這個版本上配置五筆的「簡入繁出」已經非常的簡單 ，無須再像以往那樣手動安裝 opencc 的庫等操作 ，只需簡單寫一下配置文件即可 。</p>
+<p>簡入繁出的主要配置文件 <code>wubi_trad.schema.yaml</code> 內容如下：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># Rime schema settings</span></div><div class="line"><span class="comment"># encoding: utf-8</span></div><div class="line"></div><div class="line"><span class="attr">schema:</span></div><div class="line"><span class="attr">  schema_id:</span> wubi_trad</div><div class="line"><span class="attr">  name:</span> 五筆·簡入繁出</div><div class="line"><span class="attr">  version:</span> <span class="string">"0.6"</span></div><div class="line"><span class="attr">  author:</span></div><div class="line"><span class="bullet">    -</span> 發明人 王永民先生</div><div class="line"><span class="bullet">    -</span> 輸入方案製作 佛振 &lt;chen.sst@gmail.com<span class="string">&gt;</span></div><div class="line"><span class="attr">  description:</span> <span class="string">|</span></div><div class="line">    五筆字型86版 簡入繁出</div><div class="line">    需要安裝 opencc 簡繁轉換詞典</div><div class="line"><span class="attr">  dependencies:</span></div><div class="line"><span class="bullet">    -</span> pinyin_simp</div><div class="line"></div><div class="line"><span class="attr">switches:</span></div><div class="line"><span class="attr">  - name:</span> ascii_mode</div><div class="line"><span class="attr">    reset:</span> <span class="number">0</span></div><div class="line"><span class="attr">    states:</span> [ 中文, 西文 ]</div><div class="line"><span class="attr">  - name:</span> full_shape</div><div class="line"><span class="attr">    states:</span> [ 半角, 全角 ]</div><div class="line"><span class="attr">  - name:</span> extended_charset</div><div class="line"><span class="attr">    states:</span> [ 常用, 增廣 ]</div><div class="line"><span class="attr">  - name:</span> zh_trad</div><div class="line"><span class="attr">    reset:</span> <span class="number">1</span></div><div class="line"><span class="attr">    states:</span> [ 简体, 繁體 ]</div><div class="line"><span class="attr">  - name:</span> ascii_punct</div><div class="line"><span class="attr">    states:</span> [ 。，, ．， ]</div><div class="line"></div><div class="line"><span class="attr">engine:</span></div><div class="line"><span class="attr">  processors:</span></div><div class="line"><span class="bullet">    -</span> ascii_composer</div><div class="line"><span class="bullet">    -</span> recognizer</div><div class="line"><span class="bullet">    -</span> key_binder</div><div class="line"><span class="bullet">    -</span> speller</div><div class="line"><span class="bullet">    -</span> punctuator</div><div class="line"><span class="bullet">    -</span> selector</div><div class="line"><span class="bullet">    -</span> navigator</div><div class="line"><span class="bullet">    -</span> express_editor</div><div class="line"><span class="attr">  segmentors:</span></div><div class="line"><span class="bullet">    -</span> ascii_segmentor</div><div class="line"><span class="bullet">    -</span> matcher</div><div class="line"><span class="bullet">    -</span> abc_segmentor</div><div class="line"><span class="bullet">    -</span> punct_segmentor</div><div class="line"><span class="bullet">    -</span> fallback_segmentor</div><div class="line"><span class="attr">  translators:</span></div><div class="line"><span class="bullet">    -</span> punct_translator</div><div class="line"><span class="bullet">    -</span> reverse_lookup_translator</div><div class="line"><span class="bullet">    -</span> table_translator</div><div class="line"><span class="attr">  filters:</span></div><div class="line"><span class="bullet">    -</span> simplifier</div><div class="line"><span class="bullet">    -</span> uniquifier</div><div class="line"></div><div class="line"><span class="attr">speller:</span></div><div class="line"><span class="attr">  delimiter:</span> <span class="string">" ;'"</span></div><div class="line"><span class="attr">  max_code_length:</span> <span class="number">4</span></div><div class="line"></div><div class="line"><span class="attr">translator:</span></div><div class="line"><span class="attr">  dictionary:</span> wubi86</div><div class="line"><span class="attr">  prism:</span> wubi_trad</div><div class="line"><span class="attr">  enable_charset_filter:</span> <span class="literal">true</span></div><div class="line"><span class="attr">  disable_user_dict_for_patterns:</span></div><div class="line"><span class="bullet">    -</span> <span class="string">"^z.*$"</span></div><div class="line"></div><div class="line"><span class="attr">abc_segmentor:</span></div><div class="line"><span class="attr">  extra_tags:</span></div><div class="line"><span class="bullet">    -</span> reverse_lookup</div><div class="line"></div><div class="line"><span class="attr">reverse_lookup:</span></div><div class="line"><span class="attr">  dictionary:</span> pinyin_simp</div><div class="line"><span class="attr">  prefix:</span> <span class="string">"`"</span></div><div class="line"><span class="attr">  suffix:</span> <span class="string">"'"</span></div><div class="line"><span class="attr">  tips:</span> 〔拼音〕</div><div class="line"><span class="attr">  preedit_format:</span></div><div class="line"><span class="bullet">    -</span> xform/([nl])v/$<span class="number">1</span>ü/</div><div class="line"><span class="bullet">    -</span> xform/([nl])ue/$<span class="number">1</span>üe/</div><div class="line"><span class="bullet">    -</span> xform/([jqxy])v/$<span class="number">1</span>u/</div><div class="line"></div><div class="line"><span class="attr">simplifier:</span></div><div class="line"><span class="attr">  opencc_config:</span> s2t.json</div><div class="line"><span class="attr">  option_name:</span> zh_trad</div><div class="line"></div><div class="line"><span class="attr">punctuator:</span></div><div class="line"><span class="attr">  import_preset:</span> default</div><div class="line"></div><div class="line"><span class="attr">key_binder:</span></div><div class="line"><span class="attr">  import_preset:</span> default</div><div class="line"></div><div class="line"><span class="attr">recognizer:</span></div><div class="line"><span class="attr">  import_preset:</span> default</div><div class="line"><span class="attr">  patterns:</span></div><div class="line"><span class="attr">    reverse_lookup:</span> <span class="string">"`[a-z]*'?$"</span></div></pre></td></tr></table></figure>
+<p>寫好了這個主要配置文件之後 ，還需要在 <code>default.custom.yaml</code> 將繁體五筆輸入法寫入到已選輸入法中 ，這樣在部署的時候才能生成相關的 bin 文件 。</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="attr">customization:</span></div><div class="line"><span class="attr">  distribution_code_name:</span> Weasel</div><div class="line"><span class="attr">  distribution_version:</span> <span class="number">0.9</span><span class="number">.26</span><span class="number">.1</span></div><div class="line"><span class="attr">  generator:</span> <span class="string">"Rime::SwitcherSettings"</span></div><div class="line"><span class="attr">  modified_time:</span> <span class="string">"Mon Aug 06 02:21:38 2012"</span></div><div class="line"><span class="attr">  rime_version:</span> <span class="number">0.9</span><span class="number">.2</span></div><div class="line"><span class="attr">patch:</span></div><div class="line"><span class="attr">  schema_list:</span></div><div class="line"><span class="attr">    - schema:</span> wubi_pinyin</div><div class="line"><span class="attr">    - schema:</span> wubi_trad</div></pre></td></tr></table></figure>
+<p>到這裏 ，繁體五筆所需要的配置已經完成 ，部署完成就可以愉快的用 Squirrel 來寫繁體字了 。</p>
+<p>不過 ，挑剔如我 ，怎麼能忍受在 <code>default.custom.yaml</code> 裏放置兩個五筆輸入法 ？平時用的是 <code>wubi_pinyin</code> 只要將 <code>wubi_pinyin.schema.yaml</code> 稍微修改一下即可 ：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># Rime schema settings</span></div><div class="line"><span class="comment"># encoding: utf-8</span></div><div class="line"></div><div class="line"><span class="attr">schema:</span></div><div class="line"><span class="attr">  schema_id:</span> wubi_pinyin</div><div class="line"><span class="attr">  name:</span> <span class="string">"五笔·拼音"</span></div><div class="line"><span class="attr">  version:</span> <span class="string">"0.9"</span></div><div class="line"><span class="attr">  author:</span></div><div class="line"><span class="bullet">    -</span> 發明人 王永民先生</div><div class="line"><span class="attr">  description:</span> <span class="string">|</span></div><div class="line">    五筆字型86版＋漢語拼音混合輸入。</div><div class="line">    碼表源自 ibus-table</div><div class="line"><span class="attr">  dependencies:</span></div><div class="line"><span class="bullet">    -</span> pinyin_simp</div><div class="line"></div><div class="line"><span class="attr">switches:</span></div><div class="line"><span class="attr">  - name:</span> extended_charset</div><div class="line"><span class="attr">    states:</span> [ 常用, 增廣 ]</div><div class="line"><span class="attr">  - name:</span> simplification</div><div class="line"><span class="attr">    reset:</span> <span class="number">1</span></div><div class="line"><span class="attr">    states:</span> [ 汉字, 漢字 ]</div><div class="line"></div><div class="line"><span class="attr">simplifier:</span></div><div class="line"><span class="attr">     opencc_config:</span> s2t.json</div><div class="line"></div><div class="line"><span class="attr">engine:</span></div><div class="line"><span class="attr">  processors:</span></div><div class="line"><span class="bullet">    -</span> ascii_composer</div><div class="line"><span class="bullet">    -</span> recognizer</div><div class="line"><span class="bullet">    -</span> key_binder</div><div class="line"><span class="bullet">    -</span> speller</div><div class="line"><span class="bullet">    -</span> punctuator</div><div class="line"><span class="bullet">    -</span> selector</div><div class="line"><span class="bullet">    -</span> navigator</div><div class="line"><span class="bullet">    -</span> express_editor</div><div class="line"><span class="attr">  segmentors:</span></div><div class="line"><span class="bullet">    -</span> ascii_segmentor</div><div class="line"><span class="bullet">    -</span> matcher</div><div class="line"><span class="bullet">    -</span> abc_segmentor</div><div class="line"><span class="bullet">    -</span> punct_segmentor</div><div class="line"><span class="bullet">    -</span> fallback_segmentor</div><div class="line"><span class="attr">  translators:</span></div><div class="line"><span class="bullet">    -</span> punct_translator</div><div class="line"><span class="bullet">    -</span> reverse_lookup_translator</div><div class="line"><span class="bullet">    -</span> table_translator</div><div class="line"><span class="attr">  filters:</span></div><div class="line"><span class="bullet">    -</span> simplifier</div><div class="line"><span class="bullet">    -</span> uniquifier</div><div class="line"></div><div class="line"><span class="attr">speller:</span></div><div class="line"><span class="attr">  delimiter:</span> <span class="string">" ;'"</span></div><div class="line"><span class="attr">  max_code_length:</span> <span class="number">4</span>  <span class="comment"># 四碼頂字上屏</span></div><div class="line"></div><div class="line"><span class="attr">translator:</span></div><div class="line"><span class="attr">  dictionary:</span> wubi86</div><div class="line"><span class="attr">  prism:</span> wubi_pinyin</div><div class="line"><span class="attr">  enable_charset_filter:</span> <span class="literal">true</span></div><div class="line"><span class="attr">  enable_sentence:</span> <span class="literal">true</span></div><div class="line"><span class="attr">  enable_encoder:</span> <span class="literal">true</span></div><div class="line"><span class="attr">  encode_commit_history:</span> <span class="literal">true</span></div><div class="line"><span class="attr">  max_phrase_length:</span> <span class="number">4</span></div><div class="line"><span class="attr">  disable_user_dict_for_patterns:</span></div><div class="line"><span class="bullet">    -</span> <span class="string">"^z.*$"</span></div><div class="line"></div><div class="line"><span class="attr">abc_segmentor:</span></div><div class="line"><span class="attr">  extra_tags:</span></div><div class="line"><span class="bullet">    -</span> reverse_lookup</div><div class="line"></div><div class="line"><span class="attr">reverse_lookup:</span></div><div class="line"><span class="attr">  dictionary:</span> pinyin_simp</div><div class="line"><span class="attr">  prefix:</span> <span class="string">"`"</span></div><div class="line"><span class="attr">  suffix:</span> <span class="string">"'"</span></div><div class="line"><span class="attr">  tips:</span> 〔拼音〕</div><div class="line"><span class="attr">  preedit_format:</span></div><div class="line"><span class="bullet">    -</span> xform/([nl])v/$<span class="number">1</span>ü/</div><div class="line"><span class="bullet">    -</span> xform/([nl])ue/$<span class="number">1</span>üe/</div><div class="line"><span class="bullet">    -</span> xform/([jqxy])v/$<span class="number">1</span>u/</div><div class="line"></div><div class="line"><span class="attr">punctuator:</span></div><div class="line"><span class="attr">  import_preset:</span> default</div><div class="line"></div><div class="line"><span class="attr">key_binder:</span></div><div class="line"><span class="attr">  import_preset:</span> default</div><div class="line"></div><div class="line"><span class="attr">recognizer:</span></div><div class="line"><span class="attr">  import_preset:</span> default</div><div class="line"><span class="attr">  patterns:</span></div><div class="line"><span class="attr">    reverse_lookup:</span> <span class="string">"`[a-z]*'?$"</span></div></pre></td></tr></table></figure>
+<p>至此 ，配置完全完成 ，需要注意的是 yaml 文件的格式 。</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/輸入法/" rel="tag"># 輸入法</a>
+          
+            <a href="/tags/Squirrel/" rel="tag"># Squirrel</a>
+          
+            <a href="/tags/RIME/" rel="tag"># RIME</a>
+          
+        </div>
+      
+
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.jpg"
+               alt="靈魂歌者喵喵喵" />
+          <p class="site-author-name" itemprop="name">靈魂歌者喵喵喵</p>
+          <p class="site-description motion-element" itemprop="description"></p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">1</span>
+              <span class="site-state-item-name">posts</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">categories</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">tags</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/BruceLEO1969" target="_blank" title="微博">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  微博
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+          <div class="cc-license motion-element" itemprop="license">
+            <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" target="_blank">
+              <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
+            </a>
+          </div>
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#爲什麼是繁體"><span class="nav-number">1.</span> <span class="nav-text">爲什麼是繁體</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置"><span class="nav-number">2.</span> <span class="nav-text">配置</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2015 - 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">靈魂歌者喵喵喵</span>
+</div>
+
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="https://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+        
+
+<div class="busuanzi-count">
+
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv"><i class="fa fa-user"></i><span class="busuanzi-value" id="busuanzi_value_site_uv"></span>guys</span>
+  
+
+  
+    <span class="site-pv"><i class="fa fa-eye"></i><span class="busuanzi-value" id="busuanzi_value_site_pv"></span>times</span>
+  
+  
+</div>
+
+
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+	
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+
+</body>
+</html>
