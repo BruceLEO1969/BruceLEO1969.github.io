@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.balaleica.xyz/"/>
-  <updated>2016-12-09T04:29:20.273Z</updated>
+  <updated>2016-12-11T01:10:40.145Z</updated>
   <id>http://blog.balaleica.xyz/</id>
   
   <author>
@@ -20,12 +20,12 @@
     <link href="http://blog.balaleica.xyz/2016/05/02/Mac%20Squirrel%20%E8%BC%B8%E5%87%BA%E7%B9%81%E9%AB%94%E4%B8%AD%E6%96%87/"/>
     <id>http://blog.balaleica.xyz/2016/05/02/Mac Squirrel 輸出繁體中文/</id>
     <published>2016-05-01T17:03:39.000Z</published>
-    <updated>2016-12-09T04:29:20.273Z</updated>
+    <updated>2016-12-11T01:10:40.145Z</updated>
     
-    <content type="html"><![CDATA[<p><img src="https://rimeime.github.io/images/logo.png" class="img-topic"></p>
-<p>Mac 上配置 Rime 用五筆輸出繁體字的配置。</p>
+    <content type="html"><![CDATA[<p>Mac 上 Rime 用五筆輸出繁體字的配置。</p>
 <a id="more"></a>
-<h2 id="爲什麼是繁體"><a href="#爲什麼是繁體" class="headerlink" title="爲什麼是繁體"></a>爲什麼是繁體</h2><p>文章開頭 ，先感謝<strong>佛振</strong>大神創造了輸入法之神 Rime 讓我們這些輸入法愛好者從此有了神的庇祐 。</p>
+<p><img src="https://rimeime.github.io/images/logo.png" class="img-center"></p>
+<h2 id="爲什麼是繁體"><a href="#爲什麼是繁體" class="headerlink" title="爲什麼是繁體"></a>爲什麼是繁體</h2><p>文章開頭 ，先感謝<strong>佛振</strong>大神創造了輸入法之神 Rime 實乃輸入法愛好者之福 。</p>
 <p>至於爲什麼是繁體 ，李如一先生在知乎上的回答基本上囊括了所有的初衷與動機 ：</p>
 <blockquote>
 <ol>
@@ -46,8 +46,7 @@
     
     <summary type="html">
     
-      &lt;p&gt;&lt;img src=&quot;https://rimeime.github.io/images/logo.png&quot; class=&quot;img-topic&quot;&gt;&lt;/p&gt;
-&lt;p&gt;Mac 上配置 Rime 用五筆輸出繁體字的配置。&lt;/p&gt;
+      &lt;p&gt;Mac 上 Rime 用五筆輸出繁體字的配置。&lt;/p&gt;
     
     </summary>
     
@@ -69,9 +68,11 @@
     <link href="http://blog.balaleica.xyz/2015/08/31/agnoster-SSH/"/>
     <id>http://blog.balaleica.xyz/2015/08/31/agnoster-SSH/</id>
     <published>2015-08-31T14:32:01.000Z</published>
-    <updated>2016-12-09T04:38:54.390Z</updated>
+    <updated>2016-12-11T01:06:45.018Z</updated>
     
-    <content type="html"><![CDATA[<p>通过修改 .zshrc 配置文件修复 SSH 下 oh-my-zsh agnoster 主题 user@hostname 的显示異常问题<br><img src="http://7xku3r.com1.z0.glb.clouddn.com/2015-08-31 at 22.42.png" class="img-topic"><br><a id="more"></a></p>
+    <content type="html"><![CDATA[<p>通过修改 .zshrc 配置文件修复 SSH 下 oh-my-zsh agnoster 主题 user@hostname 的显示異常问题</p>
+<a id="more"></a>
+<p><img src="http://7xku3r.com1.z0.glb.clouddn.com/2015-08-31 at 22.42.png" class="img-center"></p>
 <h2 id="症状"><a href="#症状" class="headerlink" title="症状"></a>症状</h2><p>如果只是本地终端的话 通过在配置文件里设定 DEFAULT_USER=”$USER” 就可以不显示 user@hostname 可是如果通过 SSH 连接的话这样设置并不完整 依然会显示 user@hostname 不过诡异的是 如果通过 sudo su 彻换到 root 用户的话显示就正常了 另外 就算默认登入的用户是 root 还是要通过 sudo su 来关闭 user@hostname 的显示</p>
 <p>怨念 :(</p>
 <h2 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h2><p>重写 agnoster 主题上的 prompt_context 或 build_prompt 函数 可以解决 把下面的代码片段放置在 ~/.zshrc 的结尾 </p>
@@ -80,7 +81,7 @@
     
     <summary type="html">
     
-      &lt;p&gt;通过修改 .zshrc 配置文件修复 SSH 下 oh-my-zsh agnoster 主题 user@hostname 的显示異常问题&lt;br&gt;&lt;img src=&quot;http://7xku3r.com1.z0.glb.clouddn.com/2015-08-31 at 22.42.png&quot; class=&quot;img-topic&quot; /&gt;&lt;br&gt;
+      &lt;p&gt;通过修改 .zshrc 配置文件修复 SSH 下 oh-my-zsh agnoster 主题 user@hostname 的显示異常问题&lt;/p&gt;
     
     </summary>
     
@@ -100,17 +101,18 @@
     <link href="http://blog.balaleica.xyz/2015/08/20/Mac-bogon-hostname-fix/"/>
     <id>http://blog.balaleica.xyz/2015/08/20/Mac-bogon-hostname-fix/</id>
     <published>2015-08-20T15:05:16.000Z</published>
-    <updated>2016-12-09T04:46:13.024Z</updated>
+    <updated>2016-12-11T01:07:51.514Z</updated>
     
-    <content type="html"><![CDATA[<p>Mac 终端里恶心的 bogon 及解决方法<br><img src="http://7xku3r.com1.z0.glb.clouddn.com/15-8-20/529899.jpg" class="img-topic"></p>
+    <content type="html"><![CDATA[<p>Mac 终端里詭異的 bogon 及解决方法</p>
 <a id="more"></a>
+<p><img src="http://7xku3r.com1.z0.glb.clouddn.com/15-8-20/529899.jpg" class="img-topic"></p>
 <h2 id="bogon-由来"><a href="#bogon-由来" class="headerlink" title="bogon 由来"></a>bogon 由来</h2><p>Mac 上计算机名有时候会错误的显示成 bogon . 这是因为终端会先向 DNS 请求查询当前 IP 的反向域名解析的结果（蠢哭 QAQ），如果查询不到再显示我们设置的计算机名 。而由于我们的 DNS 错误地将保留地址反向的 NS 查询结果返回了 bogon . 其中 bogon 本应该用来指虚假的 IP 地址 ，而非保留 IP 地址 。因此就出现了会时不时地打印 bogon 这种奇怪名字作为计算机名的现象 。</p>
 <h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><p>运行以下命令：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">sudo hostname your-desired-host-name</div><div class="line">sudo scutil --set LocalHostName $(hostname)</div><div class="line">sudo scutil --set HostName $(hostname)</div></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;Mac 终端里恶心的 bogon 及解决方法&lt;br&gt;&lt;img src=&quot;http://7xku3r.com1.z0.glb.clouddn.com/15-8-20/529899.jpg&quot; class=&quot;img-topic&quot; /&gt;&lt;/p&gt;
+      &lt;p&gt;Mac 终端里詭異的 bogon 及解决方法&lt;/p&gt;
     
     </summary>
     
