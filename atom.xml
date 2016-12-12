@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.balaleica.xyz/"/>
-  <updated>2016-12-11T09:52:35.142Z</updated>
+  <updated>2016-12-12T01:47:35.138Z</updated>
   <id>http://blog.balaleica.xyz/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://blog.balaleica.xyz/2016/12/11/autossh-systemd/"/>
     <id>http://blog.balaleica.xyz/2016/12/11/autossh-systemd/</id>
     <published>2016-12-11T02:16:52.000Z</published>
-    <updated>2016-12-11T09:52:35.142Z</updated>
+    <updated>2016-12-12T01:47:35.138Z</updated>
     
     <content type="html"><![CDATA[<p>利用 autossh 構建反向 ssh 隧道並通過 systemd 維持長久連接</p>
 <a id="more"></a>
@@ -46,11 +46,11 @@
       <category term="Linux" scheme="http://blog.balaleica.xyz/categories/Linux/"/>
     
     
+      <category term="Linux" scheme="http://blog.balaleica.xyz/tags/Linux/"/>
+    
       <category term="autossh" scheme="http://blog.balaleica.xyz/tags/autossh/"/>
     
       <category term="systemd" scheme="http://blog.balaleica.xyz/tags/systemd/"/>
-    
-      <category term="linux" scheme="http://blog.balaleica.xyz/tags/linux/"/>
     
   </entry>
   
