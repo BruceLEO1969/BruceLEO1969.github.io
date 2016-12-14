@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.balaleica.xyz/"/>
-  <updated>2016-12-14T12:44:55.265Z</updated>
+  <updated>2016-12-14T12:47:22.571Z</updated>
   <id>http://blog.balaleica.xyz/</id>
   
   <author>
@@ -20,14 +20,14 @@
     <link href="http://blog.balaleica.xyz/2016/12/14/Deepin-Desktop-Enviroment-for-Arch/"/>
     <id>http://blog.balaleica.xyz/2016/12/14/Deepin-Desktop-Enviroment-for-Arch/</id>
     <published>2016-12-14T11:51:32.000Z</published>
-    <updated>2016-12-14T12:44:55.265Z</updated>
+    <updated>2016-12-14T12:47:22.571Z</updated>
     
     <content type="html"><![CDATA[<p>Deepin Desktop Environment 在 Arch Linux 上的調教</p>
 <a id="more"></a>
 <h2 id="總覽"><a href="#總覽" class="headerlink" title="總覽"></a>總覽</h2><p>早在剛入門 Linux 的時候有接觸過 Deepin 那會兒本身對 Linux 理解也不多 直觀上只是覺得看起來是比 Ubuntu 要好看些 其他常用的東西也沒有太大的區別畢竟都是基於 Ubuntu 的發行版嘛 嗯還有 Terminal 比起 gnome-terminal 要來的弱一點 桌面卡頓掛起的機率來得甚至比 Unity 還要高 所以也只是短暫體驗之後就決定放棄了 對國產軟件缺乏信心也是另一個重要因素 此後的日子陸續經歷了在 Ubuntu、Debian、Fedora、Arch、Gentoo 幾大發行版本之間的輪換 桌面環境也先後折騰過 Gnome、KDE、Unity、MATE 等等 最終還是在 Gnome 上定居了下來 雖然 Gnome 變得越越糟糕 很多 Gnome 用戶都陸續逃離了 只是對於我個人使用需求來說其他競品也大多不夠爭氣 沒有足夠大的優勢將 Gnome 取而代之 畢業工作後因業務需要 前期都呆在 Windows 上了 直到最近總算沒法忍受之後完全切換到了 Arch 工作 沒想到的是 如今的 Gnome 已經爛到沒能流暢的完成基本的日常操作了 於是今天無奈將桌面環境轉換成了 Deepin </p>
 <p>久違的 Deepin 啊 裝完登錄系統之後確實給了我眼前一亮的感覺 基本走出新手村之後很久沒有哪個桌面環境或者說哪個發行版能給我這感覺了 相當的驚艶 美觀程度當然不是標配的 Gnome 能比 難能可貴的是流暢度竟然也比 Gnome 來得要高 還有各種過渡動畫等等 都透露出一種國產軟件已經不再擁有的匠心 給深度團隊點個贊 沒有完整體驗過 Deepin 系統 所以不對其他部分作過多無意義的評論 單單從 DE 來看足見其高水準 加上還有 Deepin 與網易合作的 網易雲音樂 Linux 版都是相當的高品質 相信作爲發行版的 Deepin 也不會令人失望 </p>
 <h2 id="調教"><a href="#調教" class="headerlink" title="調教"></a>調教</h2><p>雖說 Deepin 作爲一個 Desktop Environment 來說已經足夠在 DE 領域傲視一衆對手 但結合使用習慣或者說需求 總得進行相當程度的自定義設置 比如 Numix-Circle-icon 恰好這裏就有一個小問題 Deepin 的 Launncher icon 在大多數的主題裏面都能正常顯示 不過在 Numinx 系裏面剛好都沒有相應的 icon 網上搜了下有不少人反映這個問題不過 粗略瀏覽之下沒有發現合理的解法 於是還是自己找原吧 </p>
-<p>定義 icon 相關的設置大多都在 <code>/usr/share/icon/</code> 裏面 經對比 Deepin 默認主題下面在 <code>places</code> 目錄包含了 Launcher 的 icon 並在 index.theme 文件內定義了相關的 icon 設置而 Numix 系列裏都沒有包含此 icon 以及相應配置文件 於是解法已經是呼之欲出啦 將 places 目錄 copy 過去 Numix 下面並在 Numix 的 index.theme 中添加相應的配置文件即可 配合 Bliss 壁紙耳目一新<br>嘿嘿嘿 </p>
+<p>定義 icon 相關的設置大多都在 <code>/usr/share/icon/</code> 裏面 經對比 Deepin 默認主題下面在 <code>places</code> 目錄包含了 Launcher 的 icon 並在 index.theme 文件內定義了相關的 icon 設置而 Numix 系列裏都沒有包含此 icon 以及相應配置文件 於是解法已經是呼之欲出啦 將 places 目錄 copy 過去 Numix 下面並在 Numix 的 index.theme 中添加相應的配置文件即可 配合 Bliss 壁紙耳目一新 嘿嘿嘿 </p>
 <p><del>未完待續</del><br><img src="http://7xku3r.com1.z0.glb.clouddn.com/hexo_2016/DeepinScreenshot20161214204113.png" alt="deepin" title="deepin"></p>
 ]]></content>
     
