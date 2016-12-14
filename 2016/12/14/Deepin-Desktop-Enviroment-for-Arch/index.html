@@ -70,7 +70,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Linux,autossh,systemd," />
+  <meta name="keywords" content="Linux,Arch,DDE," />
 
 
 
@@ -88,18 +88,18 @@
 
 
 
-<meta name="description" content="利用 autossh 構建反向 ssh 隧道並通過 systemd 維持長久連接">
+<meta name="description" content="Deepin Desktop Environment 在 Arch Linux 上的調教">
 <meta property="og:type" content="article">
-<meta property="og:title" content="autossh systemd">
-<meta property="og:url" content="http://blog.balaleica.xyz/2016/12/11/autossh-systemd/index.html">
+<meta property="og:title" content="Deepin Desktop Enviroment for Arch">
+<meta property="og:url" content="http://blog.balaleica.xyz/2016/12/14/Deepin-Desktop-Enviroment-for-Arch/index.html">
 <meta property="og:site_name" content="嗨呀 這網站有毒">
-<meta property="og:description" content="利用 autossh 構建反向 ssh 隧道並通過 systemd 維持長久連接">
-<meta property="og:image" content="http://7xku3r.com1.z0.glb.clouddn.com/hexo_2016/sshtunnel_schema.png">
-<meta property="og:updated_time" content="2016-12-12T01:47:35.138Z">
+<meta property="og:description" content="Deepin Desktop Environment 在 Arch Linux 上的調教">
+<meta property="og:image" content="http://7xku3r.com1.z0.glb.clouddn.com/hexo_2016/DeepinScreenshot20161214204113.png">
+<meta property="og:updated_time" content="2016-12-14T12:44:55.265Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="autossh systemd">
-<meta name="twitter:description" content="利用 autossh 構建反向 ssh 隧道並通過 systemd 維持長久連接">
-<meta name="twitter:image" content="http://7xku3r.com1.z0.glb.clouddn.com/hexo_2016/sshtunnel_schema.png">
+<meta name="twitter:title" content="Deepin Desktop Enviroment for Arch">
+<meta name="twitter:description" content="Deepin Desktop Environment 在 Arch Linux 上的調教">
+<meta name="twitter:image" content="http://7xku3r.com1.z0.glb.clouddn.com/hexo_2016/DeepinScreenshot20161214204113.png">
 
 
 
@@ -127,13 +127,13 @@
 
 
 
-  <link rel="canonical" href="http://blog.balaleica.xyz/2016/12/11/autossh-systemd/"/>
+  <link rel="canonical" href="http://blog.balaleica.xyz/2016/12/14/Deepin-Desktop-Enviroment-for-Arch/"/>
 
 
 
 
 
-  <title> autossh systemd | 嗨呀 這網站有毒 </title>
+  <title> Deepin Desktop Enviroment for Arch | 嗨呀 這網站有毒 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -303,7 +303,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://blog.balaleica.xyz/2016/12/11/autossh-systemd/">
+  <link itemprop="mainEntityOfPage" href="http://blog.balaleica.xyz/2016/12/14/Deepin-Desktop-Enviroment-for-Arch/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="靈魂歌者喵喵喵">
@@ -327,7 +327,7 @@
             
             
               
-                autossh systemd
+                Deepin Desktop Enviroment for Arch
               
             
           </h1>
@@ -340,8 +340,8 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-12-11T10:16:52+08:00">
-                2016-12-11
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-12-14T19:51:32+08:00">
+                2016-12-14
               </time>
             
 
@@ -359,8 +359,8 @@
               <span class="post-meta-item-text">In</span>
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Linux/" itemprop="url" rel="index">
-                    <span itemprop="name">Linux</span>
+                  <a href="/categories/Linux-Desktop-Environment/" itemprop="url" rel="index">
+                    <span itemprop="name">Linux Desktop Environment</span>
                   </a>
                 </span>
 
@@ -374,8 +374,8 @@
             
               <span class="post-comments-count">
                 <span class="post-meta-divider">|</span>
-                <a href="/2016/12/11/autossh-systemd/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/11/autossh-systemd/" itemprop="commentCount"></span>
+                <a href="/2016/12/14/Deepin-Desktop-Enviroment-for-Arch/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/14/Deepin-Desktop-Enviroment-for-Arch/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -406,20 +406,14 @@
       
 
       
-        <p>利用 autossh 構建反向 ssh 隧道並通過 systemd 維持長久連接</p>
+        <p>Deepin Desktop Environment 在 Arch Linux 上的調教</p>
 <a id="more"></a>
-<p><img src="http://7xku3r.com1.z0.glb.clouddn.com/hexo_2016/sshtunnel_schema.png" alt="autossh"></p>
-<h2 id="場景"><a href="#場景" class="headerlink" title="場景"></a>場景</h2><p>需要從公網連接到位於內網的機器時 可以先從位於內網的 LocalServer 向公網的某臺 RelayServer<br>發起 ssh 的反連接 然後利用這個已建立的反向連接從公網連接 Localserver</p>
-<blockquote>
-<p>LocalServer~$ ssh -fN -R 10022:localhost:22 RelayServer_USER@RelayServer</p>
-</blockquote>
-<p><code>-R 10022:localhost:22</code> 定義了反向隧道 它通過 RelayServer 的 10022 端口將流量轉發到 LocalServer 的 22 端口 <code>fN</code> 参数是让 ssh 在后台运行</p>
-<p>为应对不稳定网络环境 如网络拥塞以及 ssh 超时等问题 需要使用 autossh 工具维持持久连接 參數如下</p>
-<blockquote>
-<p>LocalServer~$ autossh -M 10900 -fN -o “PubkeyAuthentication=yes” -o “StrictHostKeyChecking=false” -o “PasswordAuthentication=no” -o “ServerAliveInterval 60” -o “ServerAliveCountMax 3” -R RelayServer:10022:localhost:22 Relayserver_USER@RelayServer</p>
-</blockquote>
-<h2 id="systemd"><a href="#systemd" class="headerlink" title="systemd"></a>systemd</h2><p>在 Arch 中通過 systemd 來控制開機自啓 service 如下</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">[Unit]</div><div class="line">Description=Reverse channel to workstation</div><div class="line">Wants=network-online.target</div><div class="line">After=network.target</div><div class="line"></div><div class="line">[Service]</div><div class="line">Type=simple</div><div class="line">User=[USER]</div><div class="line">Restart=always</div><div class="line">RestartSec=60</div><div class="line">ExecStart=/usr/bin/autossh -M 20000 -q -N -o &quot;ServerAliveInterval 60&quot; -o &quot;ServerAliveCountMax 3&quot; USER@RelayServer -R RelayServer:6681:localhost:22</div><div class="line"></div><div class="line">[Install]</div><div class="line">WantedBy=multi-user.target</div></pre></td></tr></table></figure>
+<h2 id="總覽"><a href="#總覽" class="headerlink" title="總覽"></a>總覽</h2><p>早在剛入門 Linux 的時候有接觸過 Deepin 那會兒本身對 Linux 理解也不多 直觀上只是覺得看起來是比 Ubuntu 要好看些 其他常用的東西也沒有太大的區別畢竟都是基於 Ubuntu 的發行版嘛 嗯還有 Terminal 比起 gnome-terminal 要來的弱一點 桌面卡頓掛起的機率來得甚至比 Unity 還要高 所以也只是短暫體驗之後就決定放棄了 對國產軟件缺乏信心也是另一個重要因素 此後的日子陸續經歷了在 Ubuntu、Debian、Fedora、Arch、Gentoo 幾大發行版本之間的輪換 桌面環境也先後折騰過 Gnome、KDE、Unity、MATE 等等 最終還是在 Gnome 上定居了下來 雖然 Gnome 變得越越糟糕 很多 Gnome 用戶都陸續逃離了 只是對於我個人使用需求來說其他競品也大多不夠爭氣 沒有足夠大的優勢將 Gnome 取而代之 畢業工作後因業務需要 前期都呆在 Windows 上了 直到最近總算沒法忍受之後完全切換到了 Arch 工作 沒想到的是 如今的 Gnome 已經爛到沒能流暢的完成基本的日常操作了 於是今天無奈將桌面環境轉換成了 Deepin </p>
+<p>久違的 Deepin 啊 裝完登錄系統之後確實給了我眼前一亮的感覺 基本走出新手村之後很久沒有哪個桌面環境或者說哪個發行版能給我這感覺了 相當的驚艶 美觀程度當然不是標配的 Gnome 能比 難能可貴的是流暢度竟然也比 Gnome 來得要高 還有各種過渡動畫等等 都透露出一種國產軟件已經不再擁有的匠心 給深度團隊點個贊 沒有完整體驗過 Deepin 系統 所以不對其他部分作過多無意義的評論 單單從 DE 來看足見其高水準 加上還有 Deepin 與網易合作的 網易雲音樂 Linux 版都是相當的高品質 相信作爲發行版的 Deepin 也不會令人失望 </p>
+<h2 id="調教"><a href="#調教" class="headerlink" title="調教"></a>調教</h2><p>雖說 Deepin 作爲一個 Desktop Environment 來說已經足夠在 DE 領域傲視一衆對手 但結合使用習慣或者說需求 總得進行相當程度的自定義設置 比如 Numix-Circle-icon 恰好這裏就有一個小問題 Deepin 的 Launncher icon 在大多數的主題裏面都能正常顯示 不過在 Numinx 系裏面剛好都沒有相應的 icon 網上搜了下有不少人反映這個問題不過 粗略瀏覽之下沒有發現合理的解法 於是還是自己找原吧 </p>
+<p>定義 icon 相關的設置大多都在 <code>/usr/share/icon/</code> 裏面 經對比 Deepin 默認主題下面在 <code>places</code> 目錄包含了 Launcher 的 icon 並在 index.theme 文件內定義了相關的 icon 設置而 Numix 系列裏都沒有包含此 icon 以及相應配置文件 於是解法已經是呼之欲出啦 將 places 目錄 copy 過去 Numix 下面並在 Numix 的 index.theme 中添加相應的配置文件即可 配合 Bliss 壁紙耳目一新<br>嘿嘿嘿 </p>
+<p><del>未完待續</del><br><img src="http://7xku3r.com1.z0.glb.clouddn.com/hexo_2016/DeepinScreenshot20161214204113.png" alt="deepin" title="deepin"></p>
+
       
     </div>
 
@@ -444,9 +438,9 @@
           
             <a href="/tags/Linux/" rel="tag"># Linux</a>
           
-            <a href="/tags/autossh/" rel="tag"># autossh</a>
+            <a href="/tags/Arch/" rel="tag"># Arch</a>
           
-            <a href="/tags/systemd/" rel="tag"># systemd</a>
+            <a href="/tags/DDE/" rel="tag"># DDE</a>
           
         </div>
       
@@ -455,8 +449,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/05/02/Mac Squirrel 輸出繁體中文/" rel="next" title="Mac Squirrel 輸出繁體中文">
-                <i class="fa fa-chevron-left"></i> Mac Squirrel 輸出繁體中文
+              <a href="/2016/12/11/autossh-systemd/" rel="next" title="autossh systemd">
+                <i class="fa fa-chevron-left"></i> autossh systemd
               </a>
             
           </div>
@@ -464,10 +458,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/12/14/Deepin-Desktop-Enviroment-for-Arch/" rel="prev" title="Deepin Desktop Enviroment for Arch">
-                Deepin Desktop Enviroment for Arch <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -493,8 +483,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/12/11/autossh-systemd/"
-           data-title="autossh systemd" data-url="http://blog.balaleica.xyz/2016/12/11/autossh-systemd/">
+      <div class="ds-thread" data-thread-key="2016/12/14/Deepin-Desktop-Enviroment-for-Arch/"
+           data-title="Deepin Desktop Enviroment for Arch" data-url="http://blog.balaleica.xyz/2016/12/14/Deepin-Desktop-Enviroment-for-Arch/">
       </div>
     
   </div>
@@ -604,7 +594,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#場景"><span class="nav-number">1.</span> <span class="nav-text">場景</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#systemd"><span class="nav-number">2.</span> <span class="nav-text">systemd</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#總覽"><span class="nav-number">1.</span> <span class="nav-text">總覽</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#調教"><span class="nav-number">2.</span> <span class="nav-text">調教</span></a></li></ol></div>
             
 
           </div>

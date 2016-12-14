@@ -70,7 +70,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Linux,autossh,systemd," />
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
@@ -88,18 +88,15 @@
 
 
 
-<meta name="description" content="利用 autossh 構建反向 ssh 隧道並通過 systemd 維持長久連接">
-<meta property="og:type" content="article">
-<meta property="og:title" content="autossh systemd">
-<meta property="og:url" content="http://blog.balaleica.xyz/2016/12/11/autossh-systemd/index.html">
+<meta name="description" content="SOMEWHERE IN THE HELL">
+<meta property="og:type" content="website">
+<meta property="og:title" content="嗨呀 這網站有毒">
+<meta property="og:url" content="http://blog.balaleica.xyz/tags/DDE/index.html">
 <meta property="og:site_name" content="嗨呀 這網站有毒">
-<meta property="og:description" content="利用 autossh 構建反向 ssh 隧道並通過 systemd 維持長久連接">
-<meta property="og:image" content="http://7xku3r.com1.z0.glb.clouddn.com/hexo_2016/sshtunnel_schema.png">
-<meta property="og:updated_time" content="2016-12-12T01:47:35.138Z">
+<meta property="og:description" content="SOMEWHERE IN THE HELL">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="autossh systemd">
-<meta name="twitter:description" content="利用 autossh 構建反向 ssh 隧道並通過 systemd 維持長久連接">
-<meta name="twitter:image" content="http://7xku3r.com1.z0.glb.clouddn.com/hexo_2016/sshtunnel_schema.png">
+<meta name="twitter:title" content="嗨呀 這網站有毒">
+<meta name="twitter:description" content="SOMEWHERE IN THE HELL">
 
 
 
@@ -127,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="http://blog.balaleica.xyz/2016/12/11/autossh-systemd/"/>
+  <link rel="canonical" href="http://blog.balaleica.xyz/tags/DDE/"/>
 
 
 
 
 
-  <title> autossh systemd | 嗨呀 這網站有毒 </title>
+  <title> Tag: DDE | 嗨呀 這網站有毒 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -163,7 +160,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left page-post-detail ">
+  <div class="container one-collumn sidebar-position-left  ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -293,197 +290,46 @@
           <div id="content" class="content">
             
 
-  <div id="posts" class="posts-expand">
-    
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://blog.balaleica.xyz/2016/12/11/autossh-systemd/">
-
-  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="靈魂歌者喵喵喵">
-    <meta itemprop="description" content="">
-    <meta itemprop="image" content="/images/avatar.jpg">
-  </span>
-
-  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="嗨呀 這網站有毒">
-    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="嗨呀 這網站有毒" src="">
-    </span>
-  </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                autossh systemd
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-12-11T10:16:52+08:00">
-                2016-12-11
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-              <span class="post-meta-divider">|</span>
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Linux/" itemprop="url" rel="index">
-                    <span itemprop="name">Linux</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <a href="/2016/12/11/autossh-systemd/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/11/autossh-systemd/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-            <span class="post-meta-divider">|</span>
-            <span class="page-pv"><i class="fa fa-file-o"></i>
-            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>times
-            </span>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        <p>利用 autossh 構建反向 ssh 隧道並通過 systemd 維持長久連接</p>
-<a id="more"></a>
-<p><img src="http://7xku3r.com1.z0.glb.clouddn.com/hexo_2016/sshtunnel_schema.png" alt="autossh"></p>
-<h2 id="場景"><a href="#場景" class="headerlink" title="場景"></a>場景</h2><p>需要從公網連接到位於內網的機器時 可以先從位於內網的 LocalServer 向公網的某臺 RelayServer<br>發起 ssh 的反連接 然後利用這個已建立的反向連接從公網連接 Localserver</p>
-<blockquote>
-<p>LocalServer~$ ssh -fN -R 10022:localhost:22 RelayServer_USER@RelayServer</p>
-</blockquote>
-<p><code>-R 10022:localhost:22</code> 定義了反向隧道 它通過 RelayServer 的 10022 端口將流量轉發到 LocalServer 的 22 端口 <code>fN</code> 参数是让 ssh 在后台运行</p>
-<p>为应对不稳定网络环境 如网络拥塞以及 ssh 超时等问题 需要使用 autossh 工具维持持久连接 參數如下</p>
-<blockquote>
-<p>LocalServer~$ autossh -M 10900 -fN -o “PubkeyAuthentication=yes” -o “StrictHostKeyChecking=false” -o “PasswordAuthentication=no” -o “ServerAliveInterval 60” -o “ServerAliveCountMax 3” -R RelayServer:10022:localhost:22 Relayserver_USER@RelayServer</p>
-</blockquote>
-<h2 id="systemd"><a href="#systemd" class="headerlink" title="systemd"></a>systemd</h2><p>在 Arch 中通過 systemd 來控制開機自啓 service 如下</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">[Unit]</div><div class="line">Description=Reverse channel to workstation</div><div class="line">Wants=network-online.target</div><div class="line">After=network.target</div><div class="line"></div><div class="line">[Service]</div><div class="line">Type=simple</div><div class="line">User=[USER]</div><div class="line">Restart=always</div><div class="line">RestartSec=60</div><div class="line">ExecStart=/usr/bin/autossh -M 20000 -q -N -o &quot;ServerAliveInterval 60&quot; -o &quot;ServerAliveCountMax 3&quot; USER@RelayServer -R RelayServer:6681:localhost:22</div><div class="line"></div><div class="line">[Install]</div><div class="line">WantedBy=multi-user.target</div></pre></td></tr></table></figure>
-      
+  <div id="posts" class="posts-collapse">
+    <div class="collection-title">
+      <h2 >
+        DDE
+        <small>Tag</small>
+      </h2>
     </div>
 
-    <div>
+    
       
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h1 class="post-title">
         
-
-      
-    </div>
-
-    <div>
-      
+            <a class="post-title-link" href="/2016/12/14/Deepin-Desktop-Enviroment-for-Arch/" itemprop="url">
+              
+                <span itemprop="name">Deepin Desktop Enviroment for Arch</span>
+              
+            </a>
         
+      </h1>
 
-      
-    </div>
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2016-12-14T19:51:32+08:00"
+              content="2016-12-14" >
+          12-14
+        </time>
+      </div>
 
-
-    <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/tags/Linux/" rel="tag"># Linux</a>
-          
-            <a href="/tags/autossh/" rel="tag"># autossh</a>
-          
-            <a href="/tags/systemd/" rel="tag"># systemd</a>
-          
-        </div>
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2016/05/02/Mac Squirrel 輸出繁體中文/" rel="next" title="Mac Squirrel 輸出繁體中文">
-                <i class="fa fa-chevron-left"></i> Mac Squirrel 輸出繁體中文
-              </a>
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/12/14/Deepin-Desktop-Enviroment-for-Arch/" rel="prev" title="Deepin Desktop Enviroment for Arch">
-                Deepin Desktop Enviroment for Arch <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
-      
-    </footer>
+    </header>
   </article>
 
 
-
-    <div class="post-spread">
-      
-    </div>
+    
   </div>
+
+  
 
 
           </div>
@@ -491,14 +337,6 @@
 
 
           
-  <div class="comments" id="comments">
-    
-      <div class="ds-thread" data-thread-key="2016/12/11/autossh-systemd/"
-           data-title="autossh systemd" data-url="http://blog.balaleica.xyz/2016/12/11/autossh-systemd/">
-      </div>
-    
-  </div>
-
 
         </div>
         
@@ -518,17 +356,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            Table of Contents
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            Overview
-          </li>
-        </ul>
-      
 
-      <section class="site-overview sidebar-panel">
+      <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.jpg"
@@ -594,22 +423,6 @@
 
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#場景"><span class="nav-number">1.</span> <span class="nav-text">場景</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#systemd"><span class="nav-number">2.</span> <span class="nav-text">systemd</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
     </div>
@@ -724,10 +537,6 @@
   
 
   
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
-
-
 
   
 
